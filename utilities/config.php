@@ -6,28 +6,26 @@ class Config
 
     function __construct()
     {
-
-
         $url = isset($_GET['url']) ? $_GET['url'] : null;
         $url = rtrim($url, "/");
         $url = explode("/", $url);
 
         if (empty($url[0])) {
-            require 'controllers/acceuil.php';
-            $controller = new Acceuil();
+            require 'controllers/main.page.controller.php';
+            $controller = new MainPageController();
             $controller->index();
             return false;
         }
 
-        $file = 'controllers/' . $url[0] . '.php';
+        $file = 'controllers/' . $url[0] . '.controller.php';
 
         //verification de l'existence de la page courrante
 
         if (file_exists($file)) {
             require $file;
         } else {
-            require 'controllers/erreur.php';
-            $app = new Erreur();
+            require 'controllers/erreur.controller.php';
+            $app = new ErreurController();
             $app->index();
             return false;
         }
