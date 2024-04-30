@@ -1,5 +1,5 @@
 <div class="container main-container">
     <h1 class="text-center">
-        Menu View
+        Panier
     </h1>
 </div>

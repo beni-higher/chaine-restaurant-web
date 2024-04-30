@@ -21,17 +21,18 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="main.page">Home</a>
+                    <a class="nav-link" href="main-page">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="menu">Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="commande">Commande</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="panier">Panier</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="commande">Commande</a>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="login">Login</a>
                 </li>

@@ -8,7 +8,7 @@ class Setting{
 
         if(empty($url[0])){
             require 'controllers/main.page.controller.php';
-            $controller = new MainPage();
+            $controller = new MainPageController();
             $controller->index();
             return false;
         }

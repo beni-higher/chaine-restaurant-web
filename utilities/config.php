@@ -10,7 +10,7 @@ class Config
         $url = rtrim($url, "/");
         $url = explode("/", $url);
 
-        if (empty($url[0])) {
+        if (empty($url[0]) || $url[0] == "main-page") {
             require 'controllers/main.page.controller.php';
             $controller = new MainPageController();
             $controller->index();
@@ -30,7 +30,16 @@ class Config
             return false;
         }
 
-        $controller = new $url[0];
+        if ($url[0]=="menu"){
+            $controller = new MenuController();
+        }elseif ($url[0]=="commande"){
+            $controller = new CommandeController();
+        }elseif ($url[0]=="panier") {
+            $controller = new PanierController();
+        }elseif ($url[0]=="login"){
+            $controller = new LoginController();
+        }
+
         $controller->loadModel($url[0]);
 
         //verification de l'existence de methode ou fonction courrante
@@ -61,8 +70,8 @@ class Config
 
     function erreur()
     {
-        require 'controllers/Erreur.php';
-        $controller = new Erreur();
+        require 'controllers/erreur.controller.php';
+        $controller = new ErreurController();
         $controller->index();
         return false;
     }

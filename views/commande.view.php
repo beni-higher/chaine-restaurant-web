@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container main-container">
     <h1>
         Commande
     </h1>

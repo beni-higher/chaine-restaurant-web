@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @property View $view
+ */
 class Controller{
 
     function __construct(){
