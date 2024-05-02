@@ -12,13 +12,21 @@ class Controller{
 
     public function loadModel($name){
 
-        $chemin = 'models/'.$name.'_model.php';
+        $chemin = 'models/'.$name.'.model.php';
 
         if (file_exists($chemin)){
             require $chemin;
 
-            $modelName = $name.'_Model';
-            $this->model = new $modelName();
+            if ($chemin=="menu"){
+                $this->model = new MenuModel();
+            }elseif ($chemin=="commande"){
+                $this->model = new CommandeModel();
+            }elseif ($chemin=="restaurant") {
+                $this->model = new RestaurantModel();
+            }elseif ($chemin=="login"){
+                $this->model = new LoginModel();
+            }
+
         }
     }
 

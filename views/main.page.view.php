@@ -1,7 +1,7 @@
 <div class="container main-container">
-    <h1 class="text-center">Main page View</h1>
+    <h1 class="text-center"></h1>
 
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-3">
                 <ul class="list-group">
@@ -15,6 +15,7 @@
                 </ul>
             </div>
             <div class="col-9">
+                <h4 class="">Nouveautés</h4>
                 <div class="row">
                 <div class="card me-2" style="width: 18rem;">
                     <img src="assets/burger.jpeg" class="card-img-top" alt="...">
