@@ -7,8 +7,7 @@ class LoginController extends Controller{
         parent::__construct();
     }
 
-    public function index(
-    )
+    public function index()
     {
         $this->view->render('login');
     }

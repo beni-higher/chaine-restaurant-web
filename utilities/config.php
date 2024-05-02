@@ -35,10 +35,10 @@ class Config
             $controller = new MenuController();
         }elseif ($url[0]=="commande"){
             $controller = new CommandeController();
-        }elseif ($url[0]=="panier") {
-            $controller = new PanierController();
         }elseif ($url[0]=="login"){
             $controller = new LoginController();
+        }elseif ($url[0]=="panier") {
+            $controller = new PanierController();
         }
 
         $controller->loadModel($url[0]);

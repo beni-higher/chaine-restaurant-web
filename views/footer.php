@@ -13,14 +13,10 @@
         <script src="utilities/bootstrap/js/bootstrap.min.js"></script>
         <script src="utilities/default.js"></script>
         <script src="utilities/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <?php
-            if (isset($this->js)) {
-
-                foreach ($this->js as $js) {
-                    echo '<script type="text/javascript" src="views/'.$js.'"></script>';
-                }
-            }
-        ?>
-
     </body>
 </html>
+            <script>
+                $(document).ready(function(){
+
+                });
+            </script>
